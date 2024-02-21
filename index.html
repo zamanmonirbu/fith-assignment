@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusTicketing</title>
+<!-- tailwind & daisy link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+</head>
+<body>
+    <!-- nav bar -->
+    <nav class="container mx-auto mt-8 flex justify-between">
+            <div class="flex">
+                <h1 class="cursor-pointer justify-between">Z-ticket</h1>
+            </div>
+            <div>
+                <ul class="cursor-pointer flex justify-evenly">
+                    <li class="pr-10">Home</li>
+                    <li class="pr-10">About</li>
+                    <li class="pr-10">Destination</li>
+                    <li>Search</li>
+                </ul>
+            </div>
+
+     <div><button class="btn btn-outline btn-success font-semibold text-lg w-24 bg-lime-50">Bus<img src="images/bus-icon.png" alt="bus icon"></button>
+    </div>
+    </nav>
+ <!-- bus bg -->
+    <section class="container mx-auto bg-slate-400 mt-8 h-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner.png)] bg-center bg-cover bg-no-repeat rounded-lg">
+        <div class="text-center flex flex-col">
+          <div>  <h1 class="pt-5 pb-5 text-4xl lg:text-7xl font-extrabold text-gray-100">End to End Travel with</h1>
+            <p class="pb-5 pt-10 text-2xl lg:text-5xl font-extrabold text-lime-500">Zaman Travel</p>
+            <p class="pb-3 pt-10 text-xl text-yellow-50 mx-32 lg:mx-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ad architecto saepe blanditiis
+                officia eligendi molestiae neque! Ratione deserunt eum vero nulla? Inventore molestias, nobis ducimus tempore enim
+                aut sit!</p>
+            </div>
+                <button id="btn-buy-ticket" class="bg-lime-500 p-3 mt-20 text-lg  font-semibold rounded-lg w-40 ml-[45%] mb-10 justify-items-center">Buy Tickets</button>
+        </div>
+        
+
+    </section>
+<!-- best offer  with cupon code-->
+    <section class="container mx-auto mt-8 flex flex-col">
+        <h1 class="text-center mb-6 text-3xl font-bold">Best Offers For You</h1>
+        <div class="flex flex-row justify-evenly w-full gap-5">
+            <div class="bg-yellow-400 flex rounded-xl w-1/2">
+                <div class="ml-36 mr-32">
+                    <h2 class=" text-2xl font-extrabold text-center pl-5 pt-16">15% OFF</h2>
+                    <p class=" text-lg font-semibold text-center pl-5 ">On YOur Purchase</p>
+                    <p class=" opacity-80 text-lg pl-5 ">Use by March, 2024</p>
+                </div>
+                <div>
+                    <img src="images/cupon-devider.png" alt="">
+                </div>
+                <div>
+                    <p class=" text-2xl font-extrabold text-center ml-14 pt-20 pr-5">NEW15</p>
+                    <p class=" opacity-80 text-lg ml-16 text-center pr-5 ">Coupon Code</p>
+                </div>
+            </div>
+            
+            <div class="bg-purple-400 flex w-1/2 rounded-xl">
+                <div class="ml-36 mr-32">
+                    <h2 class=" text-2xl font-extrabold text-center pl-5 pt-16">20% OFF</h2>
+                    <p class=" text-lg font-semibold text-center pl-5 ">On YOur Purchase</p>
+                    <p class=" opacity-80 text-lg pl-5 ">Use by March, 2024</p>
+                </div>
+                <div>
+                    <img src="images/cupon-devider.png" alt="">
+                </div>
+                <div>
+                    <p class=" text-2xl font-extrabold text-center ml-16 pt-20 pr-5">Couple 20</p>
+                    <p class=" opacity-80 text-lg text-center ml-16 pr-5 ">Coupon Code</p>
+                </div>
+            </div>
+        </div>
+    <div class="mt-5 flex justify-center ">
+
+        <!-- best offer -->
+        <button class="btn btn-outline btn-success font-semibold mb-10 text-lg w-40 bg-lime-50">See All Offers</button>
+    </div>
+
+    <!-- ticketing part -->
+    </section>
+<!-- paribahan title & details journey -->
+    <section class="container mx-auto mb-10">
+    <div class="flex flex-col justify-center items-center">
+        <!-- paribahan heading -->
+    <div class="bg-slate-50 flex justify-center w-full mb-2">
+    <div class=" flex flex-col justify-center items-center">
+    <h1 class="text-2xl font-bold pt-10 pb-6 text-center">Zaman Paribahan</h1>
+    <p class="pb-6 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, dolorem!</p>
+     </div>                        
+   </div>
+<!-- coupn set -->
+<div class="bg-slate-200 flex items-center rounded-xl w-1/2">
+    <!-- coupon set leftside -->
+    <div class="flex flex-col">
+        <div class="flex justify-evenly pl-5">
+            <!-- paribahan part -->
+            <div class="flex">
+                <div class="mr-2"><img src="images/bus-logo.png" alt="">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-amber-700">Zaman paribahan</h2>
+                    <p class="text-lg opacity-80">Coach-009001-web! AC business_class</p>
+                </div>
+            </div>
+            <!-- 40seats left -->
+            <div class="pl-1">
+                <button class="btn btn-outline btn-success font-semibold text-lg w-48 bg-lime-50"><span id="seats-left" >40</span> seats
+                    left<img src="images/seat-green-filled.png" alt="bus icon"></button>
+            </div>
+        </div>
+        <!-- details about journey like depatrure destination -->
+        <div>
+            <!-- route -->
+            <div class="bg-slate-100 rounded-lg">
+                <div class="flex pt-2 pb-3 justify-evenly">
+                    <p>route</p>
+                    <p>Dhaka-Sylet</p>
+                </div>
+                <hr class="p-2">
+                <div class="flex justify-evenly  pb-3">
+                    <p>departure time</p>
+                    <p>10.30pm</p>
+                </div>
+                <hr class="p-3">
+                <!-- 3 button for destination -->
+                <div class="flex flex-row justify-center p-2 gap-5">
+
+                    <div class="bg-slate-300 p-2 text-center rounded-lg"><button>Boarding point-laxsipur</button></div>
+                    <div class="bg-slate-300 p-2 rounded-lg"><button>Dropping point-Bagura</button></div>
+                    <div class="bg-slate-300 p-2 rounded-lg"><button>Estimate time: 10.10</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- divider -->
+    <div>
+        <img class="h-full" src="images/info-devider.png" alt="">
+    </div>
+
+    <!--  coupon set right tside  seat price -->
+    <div class="flex justify-center items-center flex-col">
+        <img class="w-12" src="images/fare.png" alt="">
+        <p class=" text-3xl font-extrabold text-center pr-8 pl-8"><span id="ticket-price">550</span>tk</p>
+        <p class=" opacity-80 text-lg text-center pr-5">per seat</p>
+    </div>
+</div>
+    </div>
+    </section>
+
+    <!-- seat allocation -->
+    <section class="container mx-auto mb-10">
+    <!-- left+right div -->
+<div class="flex">
+    <!-- left side of bus seat allocation -->
+    <div class="w-[50%]">
+        <!-- select seat -->
+        <div>
+            <h1 class="font-bold mb-3 text-2xl">Select Your Seat</h1>
+            <hr>
+            <div class="flex flex-row justify-between w-[90%]">
+                <div>
+                    <h1 class="flex m-2"><img src="images/seat-gray.png" alt="">Available</h1>
+                </div>
+                <div>
+                    <h1 class="flex m-2"><img src="images/seat-green-filled.png" alt="">Selected</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-end mt-5 pr-28 mb-6"><button id="wheel" class="wheel-circle text-end "><img
+                        src="images/Group 56.png" alt=""></button>
+            </div>
+        </div>
+    
+        <!-- seat number-->
+        <div id="selectedSeatContainer">
+            <div class="flex justify-center mb-8 gap-16 my-1 w-full">
+                <button id="A" class="kbd w-20">A</button>
+                <button id="B" class="kbd w-20">B</button>
+                <button id="C" class="kbd w-20">C</button>
+                <button id="D" class="kbd w-20">D</button>
+    
+            </div>
+            <div class="flex justify-center mb-8 gap-16 my-1 w-full">
+                <button id="E" class="kbd w-20">E</button>
+                <button id="F" class="kbd w-20">F</button>
+                <button id="G" class="kbd w-20">G</button>
+                <button id="H" class="kbd w-20">H</button>
+    
+            </div>
+            <div class="flex justify-center mb-8 gap-16 my-1 w-full">
+                <button id="I" class="kbd w-20">I</button>
+                <button id="J" class="kbd w-20">J</button>
+                <button id="K" class="kbd w-20">K</button>
+                <button id="L" class="kbd w-20">L</button>
+    
+            </div>
+            <div class="flex justify-center mb-8 gap-16 my-1 w-full">
+                <button id="M" class="kbd w-20">M</button>
+                <button id="N" class="kbd w-20">N</button>
+                <button id="0" class="kbd w-20">O</button>
+                <button id="P" class="kbd w-20">P</button>
+    
+            </div>
+            <div class="flex justify-center mb-8 gap-16 my-1 w-full">
+                <button id="M1" class="kbd w-20">M1</button>
+                <button id="N1" class="kbd w-20">N1</button>
+                <button id="01" class="kbd w-20">O1</button>
+                <button id="P1" class="kbd w-20">P1</button>
+    
+            </div>
+            <div class="flex justify-center gap-16 my-1 w-full">
+                <button id="M2" class="kbd w-20">M2</button>
+                <button id="N2" class="kbd w-20">N2</button>
+                <button id="02" class="kbd w-20">O2</button>
+                <button id="P2" class="kbd w-20">P2</button>
+    
+            </div>
+            
+    
+    
+        </div>
+        <!-- seat number end -->
+    </div>
+    
+    <!-- left side end -->
+    <!-- right side start -->
+   <p><img class="w-24 h-full" src="images/Vertical-Line-PNG-HD-Image.png" alt=""></p>
+<div class="w-[30%]">
+        <div>
+            <h1 class="text-2xl font-bold">Select Your Seat</h1>
+        </div>
+        <!-- seat class price -->
+        <div class="flex justify-between gap-3">
+            <p class="text-lg">seat <span class="bg-lime-400 w-20">00</span></p>
+            <p class="text-lg">class</p>
+           <p class="text-lg">price</p>
+        </div>
+        <hr>
+        <br>
+        <!-- to show selected seat from javascript -->
+        <div id="selectedSeat">
+            <p id="seat-name"></p>
+            <p id="seat-class" ></p>
+            <p id="seat-price" ></p>
+        </div>
+        <hr>
+        <div class="flex justify-between">
+            <p class="text-lg font-semibold">Total Price</p>
+            <p>BDT <span id="total-price">0</span></p>
+        </div>
+<!-- coupon apply -->
+        <div>
+            <input type="text" class="apply-coupon mt-4 outline-1 outline-lime-500 border w-80 rounded-xl p-2" placeholder="apply your coupon-here" >
+            <button class=" p-2 rounded-lg bg-lime-500 font-semibold mb-10 text-lg w-20 apply-coupon-btn">Apply</button>
+           <!-- grand total -->
+            <div class="flex justify-between">
+                <p class="text-lg font-semibold">Grand Total</p>
+                <p>BDT <span id="grand-total">0</span></p>
+            </div>
+        </div>
+        <!-- passenger basic info -->
+        <!-- name -->
+        <div class="mt-4">
+            <p class="text-lg font-semibold">Passenger Name*</p>
+            <input type="text" required class="Enter-name w-96 mt-1 outline-1 outline-lime-500 border rounded-xl p-2"
+                placeholder="Enter Your Name">
+        </div>
+        <!-- Phone NUmber -->
+        <div class="mt-4">
+            <p class="text-lg font-semibold">Phone Number*</p>
+            <input type="number" required class="Enter-phone w-96 mt-1 outline-1 outline-lime-500 border rounded-xl p-2"
+                placeholder="Enter Your Phone Number">
+        </div>
+        <!-- mail id -->
+        <div class="mt-4">
+            <p class="text-lg font-semibold">Email ID</p>
+            <input type="text" required class="Enter-mail w-96 mt-1 outline-1 outline-lime-500 border rounded-xl p-2"
+                placeholder="Enter Your Mail">
+        </div>
+
+        <!-- Next button -->
+        <button id="nextBtn" class=" p-1 rounded-lg bg-lime-500 w-96 font-semibold mb-10 mt-4 h-12 text-lg">Next</button>
+</div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center hidden">
+    <!-- Modal content -->
+    <div class="bg-white rounded-lg p-8">
+      <img class="w-20 flex mt-10 ml-[43%] justify-center items-center" src="images/success.png" alt="">
+      <p class="text-3xl text-center mt-2 text-green-600">SUCCESS</p>
+      <p class="font-semibold opacity-85 pt-10 text-center">Thank you for Booking Our Bus Seats. <br>
+      We are working hard to find the best service and deals for you. <br>
+      Shortly you will find a confirmation in your email.</p>
+      <button id="continueBtn" class="p-2 mt-7 flex ml-48 rounded-lg bg-lime-500 w-80 font-semibold mb-10 justify-center h-12 text-lg">Continue</button>
+    </div>
+  </div>
+  
+
+        </section>
+        <!-- footer -->
+    <section class="container mx-auto mb-10 bg-black">
+    <div class="flex justify-evenly">
+        <div>
+        <h1 class="text-2xl font-bold mt-7 text-gray-50">Z-ticket</h1>
+        <h2 class="text-md opacity-80 text-gray-50">Z-ticketing is a digital platform <br> to reach your destination safley</h2>
+        </div>
+        <div>
+            <h1 class="text-2xl font-bold mt-7 text-gray-50">Download your app</h1>
+            <div class="flex gap-2">
+                <img class="w-10" src="images/playstore.png" alt="">
+                <p class="text-lg cursor-pointer font-semibold text-gray-50">GET IT ON <br>Google Play</p>
+        </div>
+        </div>
+        </div>
+        <hr class="m-20 border-dotted ">
+        <!-- footer last part -->
+        <div class="flex justify-between pb-16">
+        <div>
+            <p class="text-lg font-semibold text-gray-50 ml-36">@All rights reserver, z-ticketing service, 2024</p>
+        </div>
+        <div class="flex gap-16 mr-36 cursor-pointer">
+            <p class="text-lg font-semibold text-gray-50">Terms & condition</p>
+            <p class="text-lg font-semibold text-gray-50">Return Plicy</p>
+            <p class="text-lg font-semibold text-gray-50">Privecy Policy</p>
+        </div>
+        </div>
+        </section>
+        <!-- success continue hidden -->
+         
+    <script src="ticketing.js"></script>
+</body>
+</html>
+
